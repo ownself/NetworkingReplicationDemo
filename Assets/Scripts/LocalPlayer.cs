@@ -24,11 +24,14 @@ public class LocalPlayer : Player
 		HandleInput();
 	}
 
-	virtual protected void HandleInput()
+	public void ClearMovementVec() // TODO : put this into network sync logic
 	{
 		// clean previous input
 		movementVec = Vector3.zero;
+	}
 
+	virtual protected void HandleInput()
+	{
 		if (Input.GetKey(rightButton))
 		{
 			Vector3 dir = new Vector3(speed, 0, 0);

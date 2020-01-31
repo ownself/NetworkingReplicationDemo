@@ -84,7 +84,10 @@ public class Server
 		{
 			players[i].UpdatePosition(clientsPos[i]);
 		}
+	}
 
+	public void Tick()
+	{
 		// sync all the clients
 		for (int i = 0; i < clients.Count; ++i)
 		{

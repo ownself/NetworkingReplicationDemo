@@ -77,15 +77,6 @@ public class Client
 			return;
 		}
 
-		if (localPlayerID != -1)
-		{
-			ClientInfo inputInfo = new ClientInfo();
-			inputInfo.playerID = localPlayerID;
-			inputInfo.movementVec = localPlayer.GetMovementVec();
-			inputInfo.networkLatency = networkLatency;
-			myServer.SyncClientInput(inputInfo);
-		}
-
 		// update received client packages and calculate
 		int index = 0;
 		while (index < receivedPackages.Count)
@@ -103,6 +94,21 @@ public class Client
 				index++;
 			}
 		}
+	}
+
+	public void Tick()
+	{
+		if (myServer == null || localPlayerID == -1) {
+			Debug.Log("Client " + localPlayerID + ": Can't find server");
+			return;
+		}
+
+		ClientInfo inputInfo = new ClientInfo();
+		inputInfo.playerID = localPlayerID;
+		inputInfo.movementVec = localPlayer.GetMovementVec();
+		localPlayer.ClearMovementVec();
+		inputInfo.networkLatency = networkLatency;
+		myServer.SyncClientInput(inputInfo);
 	}
 
 	// get the update from server sent back
