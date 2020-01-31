@@ -9,7 +9,7 @@ public class LocalPlayer : Player
 	public KeyCode leftButton = KeyCode.A;
 
 	// Use this for initialization
-	void Start() {}
+	// void Start() {}
 
 	public void Init(float startZPos, KeyCode right, KeyCode left)
 	{
@@ -19,7 +19,7 @@ public class LocalPlayer : Player
 	}
 	
 	// Update is called once per frame
-	void Update()
+	override protected void Update()
 	{
 		HandleInput();
 	}

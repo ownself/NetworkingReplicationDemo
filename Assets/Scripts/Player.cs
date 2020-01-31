@@ -11,7 +11,7 @@ abstract public class Player : MonoBehaviour
 	protected float zPos;
 
 	protected void Start() {}
-	protected void Update() {}
+	virtual protected void Update() {}
 
 	public void Init(float startZPos) { zPos = startZPos; }
 	virtual public Vector3 GetMovementVec() { return movementVec; }
