@@ -1,0 +1,1841 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Server",
+				"ServerInfo"
+			],
+			[
+				"Ser",
+				"ServerInfo"
+			],
+			[
+				"rec",
+				"receivedPackages"
+			],
+			[
+				"inpu",
+				"inputInfo"
+			],
+			[
+				"Sy",
+				"SyncWithServer"
+			],
+			[
+				"player",
+				"players"
+			],
+			[
+				"server",
+				"serverPlayer"
+			],
+			[
+				"play",
+				"players"
+			],
+			[
+				"pos",
+				"poses"
+			],
+			[
+				"remo",
+				"remotePlayers"
+			],
+			[
+				"clien",
+				"clients"
+			],
+			[
+				"left",
+				"leftButton"
+			],
+			[
+				"right",
+				"rightButton"
+			],
+			[
+				"local",
+				"localPlayerID"
+			],
+			[
+				"mov",
+				"movementVec"
+			],
+			[
+				"ini",
+				"inputInfo"
+			],
+			[
+				"in",
+				"inputInfo"
+			],
+			[
+				"cli",
+				"clients"
+			],
+			[
+				"Cli",
+				"Client"
+			],
+			[
+				"Up",
+				"UpButton"
+			],
+			[
+				"Quali",
+				"QualitySettings"
+			],
+			[
+				"_to",
+				"_totalReserverdMemory"
+			],
+			[
+				"_mono",
+				"_monoHeapSize"
+			],
+			[
+				"Lo",
+				"Localization"
+			],
+			[
+				"GUISt",
+				"GUIStyle"
+			],
+			[
+				"Syste",
+				"SystemInfo"
+			],
+			[
+				"Setspin",
+				"SetSpinVisible"
+			],
+			[
+				"Debu",
+				"DebugUtil"
+			],
+			[
+				"perfe",
+				"perfectMaxAngle"
+			],
+			[
+				"start",
+				"startTimeout"
+			],
+			[
+				"Gameflow",
+				"GameFlowTimeout"
+			],
+			[
+				"Gamflowba",
+				"GameFlowBallDead"
+			],
+			[
+				"UIPage",
+				"UIPageLogoAnim"
+			],
+			[
+				"en",
+				"enabled"
+			],
+			[
+				"upda",
+				"updateCounter"
+			],
+			[
+				"fun",
+				"funcName"
+			],
+			[
+				"task",
+				"tasks"
+			],
+			[
+				"Memo",
+				"MemoTask"
+			],
+			[
+				"Priori",
+				"PrioritySelector"
+			],
+			[
+				"cure",
+				"currentTrigger"
+			],
+			[
+				"actr",
+				"actionTriggerLayers"
+			],
+			[
+				"_con",
+				"_controller"
+			],
+			[
+				"con",
+				"controlV2"
+			],
+			[
+				"ga",
+				"gameObject"
+			],
+			[
+				"isDra",
+				"isDragEnd"
+			],
+			[
+				"Updat",
+				"UpdateShootTiming"
+			],
+			[
+				"Onsho",
+				"OnShootOut"
+			],
+			[
+				"issho",
+				"isShootTriggered"
+			],
+			[
+				"conpla",
+				"controllingPlayer"
+			],
+			[
+				"contro",
+				"controllingTeam"
+			],
+			[
+				"isHo",
+				"isHoldEnd"
+			],
+			[
+				"_is",
+				"_isHolding"
+			],
+			[
+				"_isT",
+				"_isTouchEnd"
+			],
+			[
+				"Inpu",
+				"Input"
+			],
+			[
+				"Is",
+				"IsDragging"
+			],
+			[
+				"Ins",
+				"Instance"
+			],
+			[
+				"isD",
+				"isDragEnd"
+			],
+			[
+				"mous",
+				"mousePosition"
+			],
+			[
+				"ipu",
+				"inputMode"
+			],
+			[
+				"Tou",
+				"TouchV2"
+			],
+			[
+				"_controllerV",
+				"_controllerV2"
+			],
+			[
+				"Con",
+				"Condition"
+			],
+			[
+				"reu",
+				"return"
+			],
+			[
+				"S",
+				"Success"
+			],
+			[
+				"Sh",
+				"ShulffAtomIndex"
+			],
+			[
+				"TaskR",
+				"TaskRandom6"
+			],
+			[
+				"Pri",
+				"PrintRandomOrder"
+			],
+			[
+				"Condi",
+				"ConditionFalse"
+			],
+			[
+				"tasksf",
+				"taskSFFlag"
+			],
+			[
+				"Task",
+				"TaskSF"
+			],
+			[
+				"Dis",
+				"Disabled"
+			],
+			[
+				"taskR",
+				"taskRS"
+			],
+			[
+				"codi",
+				"conditionToggleFlag"
+			],
+			[
+				"De",
+				"DebugUtil"
+			],
+			[
+				"fa",
+				"failure"
+			],
+			[
+				"Contru",
+				"ConditionTrueFalse"
+			],
+			[
+				"ta",
+				"taskSuccuss"
+			],
+			[
+				"Unites",
+				"UnitTestAssert"
+			],
+			[
+				"su",
+				"Success"
+			],
+			[
+				"select",
+				"selectionIndex"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"_de",
+				"_default_port"
+			],
+			[
+				"_re",
+				"_response_interval_max"
+			],
+			[
+				"__de",
+				"_default_transmitter_num"
+			],
+			[
+				"logl",
+				"logLevel"
+			],
+			[
+				"_conf",
+				"_config_name"
+			],
+			[
+				"_",
+				"_config"
+			],
+			[
+				"_deu",
+				"_default_receiver_num"
+			],
+			[
+				"expre",
+				"expressage_setting"
+			],
+			[
+				"exp",
+				"expressage_log_level"
+			],
+			[
+				"log_level_de",
+				"log_level_debug"
+			],
+			[
+				"expres",
+				"expressage_logger"
+			],
+			[
+				"expr",
+				"expressage_logger"
+			],
+			[
+				"log",
+				"log_level_all"
+			],
+			[
+				"logleve",
+				"log_level_error"
+			],
+			[
+				"get",
+				"get_time"
+			],
+			[
+				"form",
+				"format_str"
+			],
+			[
+				"defa",
+				"default_port"
+			],
+			[
+				"Joi",
+				"JoinHosting"
+			],
+			[
+				"mNex",
+				"mNextBlockColor"
+			],
+			[
+				"mb",
+				"mBlockObjects"
+			],
+			[
+				"mBlo",
+				"mBlockObjects"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Scripts/Gameplay.cs",
+			"settings":
+			{
+				"buffer_size": 1146,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Server.cs",
+			"settings":
+			{
+				"buffer_size": 2670,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Client.cs",
+			"settings":
+			{
+				"buffer_size": 3118,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 8 files for \"UpdatePosition\" (case sensitive, whole word)\n\n/Users/Jimmy/Git/NetworkReplication/Assets/Scripts/Client.cs:\n   97  \t\t\t\tfor (int i = 0; i < si.poses.Count; ++i)\n   98  \t\t\t\t{\n   99: \t\t\t\t\tplayers[i].UpdatePosition(si.poses[i]);\n  100  \t\t\t\t}\n  101  \t\t\t\treceivedPackages.RemoveAt(index);\n\n/Users/Jimmy/Git/NetworkReplication/Assets/Scripts/Player.cs:\n   16  \tpublic void Init(float startZPos) { zPos = startZPos; }\n   17  \tvirtual public Vector3 GetMovementVec() { return movementVec; }\n   18: \tvirtual public void UpdatePosition(Vector3 pos)\n   19  \t{\n   20  \t\tpos.z += zPos;\n\n/Users/Jimmy/Git/NetworkReplication/Assets/Scripts/Server.cs:\n   83  \t\tfor (int i = 0; i < players.Count; ++i)\n   84  \t\t{\n   85: \t\t\tplayers[i].UpdatePosition(clientsPos[i]);\n   86  \t\t}\n   87  \n\n3 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 815,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Assets/Scripts/LocalPlayer.cs",
+			"settings":
+			{
+				"buffer_size": 860,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ServerPlayer.cs",
+			"settings":
+			{
+				"buffer_size": 282,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/RemotePlayer.cs",
+			"settings":
+			{
+				"buffer_size": 313,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "using System.Collections;"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Player.cs",
+			"settings":
+			{
+				"buffer_size": 612,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Replication.cs",
+			"settings":
+			{
+				"buffer_size": 298,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"prefe",
+				"Preferences: Settings"
+			],
+			[
+				"d",
+				"Package Control: Disable Package"
+			],
+			[
+				"disalbe",
+				"Package Control: Disable Package"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"edi",
+				"Project: Edit Project"
+			],
+			[
+				"pro",
+				"Project: Edit Project"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"check",
+				"Perforce: Checkout"
+			],
+			[
+				"pre",
+				"Preferences: Settings"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"chek",
+				"Perforce: Checkout"
+			],
+			[
+				"prefo",
+				"Perforce: Checkout"
+			],
+			[
+				"perfechec",
+				"Perforce: Checkout"
+			],
+			[
+				"perche",
+				"Perforce: Checkout"
+			],
+			[
+				"perferlog",
+				"Perforce: Login"
+			],
+			[
+				"per",
+				"Perforce: Checkout"
+			],
+			[
+				"perforce",
+				"Perforce: Checkout"
+			],
+			[
+				"perfo",
+				"Perforce: Login"
+			],
+			[
+				"perfor",
+				"Perforce: Checkout"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"prefeer",
+				"Preferences: Settings"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"bor",
+				"Preferences: Browse Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pref",
+				"Preferences: Settings - User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 353.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Jimmy/Git/NetworkReplication/Assets"
+	],
+	"file_history":
+	[
+		"/Users/Jimmy/Git/NetworkReplication/Assets/Scripts/Server.cs",
+		"/Users/Jimmy/Git/NetworkReplication/NetworkReplication.sublime-project",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/ConfigsInitializer.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/DataManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Player/ParameterFormula.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/MemoSetTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/MemoTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Selector.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Composite.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/AssetsManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/BuildScripts/build.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/UIAudioManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/LocalizationManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Components/UIDataSimple.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Atom.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/nba.sublime-project",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Decorator.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/NBA/NBAOffenseTendency.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/NBA/MemoPlayerListTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Task.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Sequence.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Dimension/Parallel.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/RedCore/Editor/Tools/OverrideImportSetting.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Pages/UIPageInGame.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/Global.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowShowOff.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/QualityManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/Tutorials/GameFlowTutorialCutScene.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameMode/TutorialGameMode.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameMode/GameMode.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowPostEnd.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/BuildScripts/importer.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Input/InputManagerV2.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/AI/Team.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Components/UIAutoSwitch.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/BackgroundLoader.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/NBAKPIManager.cs",
+		"/Users/Jimmy/Desktop/crash_logs.txt",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Configs.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Plugins/Android/AndroidManifest.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/RedCore/Base/DebugUtil.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/NetProcessor/NetProcessor.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Resources/game_configs.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Components/UIConsole.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Pages/UIPageLogoAnim.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Components/UIDataProgressBar.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Plugins/Android/mainTemplate.gradle",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Support/ios_build.sh",
+		"/Users/Jimmy/Desktop/p4_logs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Resources/AI/team.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Pages/UIPageLogin.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Rules/RuleBase.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Rules/TwentySecondsRule.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameMode/GameEvent.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Rules/TimeoutRule.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/LevelLoader.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Resources/globalservers.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/UI/Pages/UIPageDownload.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Support/assets_config.ras",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Network/NetManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowJumpBall.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowSubstitution.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowBase.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Shaders/Reflection/Mirror.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Crowd/LuxuryCrowdManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameMode/NBAGameMode.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Support/assets_deploy.py",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Editor/CI/CIBuilder.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Shaders/CutScene/LightWrapping.shader",
+		"/Users/Jimmy/Perforce/jimmy_mba/common/nba.keystore",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Plugins/Android/res/raw/hive_config.xml",
+		"/Users/Jimmy/Library/Logs/Unity/Editor.log",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Crowd/CrowdMarker.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Crowd/LuxuryCrowdMarker.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Managers/CameraManager.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Shaders/Reflection/Mirror-BumpSpec.shader",
+		"/Users/Jimmy/Perforce/TextureTest/Assets/Mirror.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/Player/Player.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Input/Controllers/CBTController.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Input/HUD/CBTControlHUD.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Sphere.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/HUD/SelectedHUD.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Input/Controllers/InputControllerBase.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowTimeout.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Rules/BallInBackcourtRule.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowBallDead.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/GameFlow/GameFlowThrowIn.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Externals/AVProVideo/Scripts/Internal/Interfaces.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/client/Assets/Scripts/GamePlay/Rules/GameRule.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/Animations/PlayerAnimator.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/CreatureData.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/AnimationBehaviours/BaseLayer/BehaviourBreakThrough.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/UI/UICallback.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/ActionMove.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Behavior.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Utility.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Condition.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Composite.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Editor/DimensionEditorUtility.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/NBA/MemoPlayerListTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Team.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Editor/DimensionEditor.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Editor/UnitTest/UnitTestEditor.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/AITest.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/NBA/NBACondition.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Decorator.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/MemoSetTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/MemoTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Task.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/AnimationBehaviours/StateBehaviourBase.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Container.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Atom.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/LoopSequence.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Sequence.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Selector.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/RandomSelector.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/PrioritySelector.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/AI/Dimension/Parallel.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/ActionScreen.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/ActionPassBall.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/ActionCheck.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/Player/Player.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/Player/BasePlayer.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/AITest.xml",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/Player/InputController.cs",
+		"/Users/Jimmy/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/Assets/Scripts/PlayerActions/AnimationBehaviours/BaseLayer/BehaviourBlock.cs"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+			"*.cs"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"UpdatePosition",
+			"receivedPackages",
+			"ClientInfo",
+			"InputInfo",
+			"1f",
+			"InputInfo",
+			"\n\t",
+			"InputInfo",
+			"ClientInfo",
+			"inputInfo",
+			"[]",
+			"i",
+			"net",
+			"InputInfo",
+			"net",
+			"SyncWithServer",
+			"localPlayerID",
+			"IsNewPlayer",
+			"playerNum",
+			"SyncWithServer",
+			"remotePlayer",
+			"RemotePlayer",
+			"pos",
+			"Player",
+			"players",
+			"SyncWithServer",
+			"localPlayer",
+			"remotePlayers",
+			"localPlayer",
+			"HandleInput",
+			"client",
+			"right",
+			"HandleInput",
+			"rightButton",
+			"Server",
+			"downButton",
+			"SyncWithServer",
+			"movementVec",
+			"num",
+			"xInterval",
+			"public",
+			"zPos",
+			"OnSt",
+			"ClientInfo",
+			"AddClient",
+			"playerNum",
+			"Instantiate",
+			"Init",
+			"startZPos",
+			"move",
+			"SyncFromServer",
+			"Sysnc",
+			"HandleMovement",
+			"myServer",
+			"Con",
+			"myServer",
+			"inpuInfo",
+			"InputInfo",
+			"InpuInfo",
+			"movementVec",
+			"transform.position",
+			"movement",
+			"SyncClientInput",
+			"server",
+			"clientInfo",
+			"playerID",
+			"localPlayerID",
+			"clientInfo",
+			"Cli",
+			"IsNew",
+			"int",
+			"\t//",
+			"player",
+			"Mon",
+			"MonoBehaviour",
+			"LeftButton",
+			"RightButton",
+			"DownButton",
+			"UpButton",
+			"KeyCode"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/Gameplay.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								800,
+								800
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 458.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Server.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2591,
+								2591
+							]
+						],
+						"settings":
+						{
+							"cursor_word_highlighter_persistant_highlight_size": 1,
+							"cursor_word_highlighter_persistant_highlight_text": "receivedPackages",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Client.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2835,
+								2835
+							]
+						],
+						"settings":
+						{
+							"cursor_word_highlighter_persistant_highlight_size": 1,
+							"cursor_word_highlighter_persistant_highlight_text": "clientInfo",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										219,
+										233
+									],
+									[
+										533,
+										547
+									],
+									[
+										739,
+										753
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								196,
+								202
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/LocalPlayer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/ServerPlayer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238,
+								238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/RemotePlayer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using System.Collections;",
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/Player.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/Replication.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "NetworkReplication.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ser",
+				"Scripts/Server.cs"
+			],
+			[
+				"play",
+				"Scripts/Player.cs"
+			],
+			[
+				"game",
+				"Scripts/Gameplay.cs"
+			],
+			[
+				"local",
+				"Scripts/LocalPlayer.cs"
+			],
+			[
+				"cli",
+				"Scripts/Client.cs"
+			],
+			[
+				"server",
+				"Scripts/Server.cs"
+			],
+			[
+				"dataman",
+				"Assets/Scripts/Managers/DataManager.cs"
+			],
+			[
+				"configi",
+				"Assets/Scripts/Managers/ConfigsInitializer.cs"
+			],
+			[
+				"sele",
+				"Assets/Scripts/AI/Dimension/Selector.cs"
+			],
+			[
+				"compo",
+				"Assets/Scripts/AI/Dimension/Composite.cs"
+			],
+			[
+				"ato",
+				"Assets/Scripts/AI/Dimension/Atom.cs"
+			],
+			[
+				"build",
+				"BuildScripts/build.xml"
+			],
+			[
+				"uidatasim",
+				"Assets/Scripts/UI/Components/UIDataSimple.cs"
+			],
+			[
+				"gameflowpos",
+				"Assets/Scripts/GamePlay/GameFlow/GameFlowPostEnd.cs"
+			],
+			[
+				"tutorgammo",
+				"Assets/Scripts/GamePlay/GameMode/TutorialGameMode.cs"
+			],
+			[
+				"gameflowtu",
+				"Assets/Scripts/GamePlay/GameFlow/Tutorials/GameFlowTutorialCutScene.cs"
+			],
+			[
+				"impo",
+				"BuildScripts/importer.xml"
+			],
+			[
+				"over",
+				"Scripts/RedCore/Editor/Tools/OverrideImportSetting.cs"
+			],
+			[
+				"qual",
+				"Scripts/Managers/QualityManager.cs"
+			],
+			[
+				"gamflowshow",
+				"Scripts/GamePlay/GameFlow/GameFlowShowOff.cs"
+			],
+			[
+				"globa",
+				"Scripts/Managers/Global.cs"
+			],
+			[
+				"assman",
+				"Scripts/Managers/AssetsManager.cs"
+			],
+			[
+				"nbakpi",
+				"Scripts/NBAKPIManager.cs"
+			],
+			[
+				"uipalog",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"confi",
+				"Scripts/Configs.cs"
+			],
+			[
+				"uipaloani",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"uipageloani",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"teacs",
+				"Scripts/AI/Team.cs"
+			],
+			[
+				"gamcon",
+				"Resources/game_configs.xml"
+			],
+			[
+				"uicon",
+				"Scripts/UI/Components/UIConsole.cs"
+			],
+			[
+				"uico",
+				"Scripts/UI/Components/UIConsole.cs"
+			],
+			[
+				"ga",
+				"Resources/game_configs.xml"
+			],
+			[
+				"debug",
+				"Scripts/RedCore/Base/DebugUtil.cs"
+			],
+			[
+				"netproc",
+				"Scripts/NetProcessor/NetProcessor.cs"
+			],
+			[
+				"androi",
+				"Plugins/Android/AndroidManifest.xml"
+			],
+			[
+				"team",
+				"Scripts/AI/Team.cs"
+			],
+			[
+				"gaflowsho",
+				"Scripts/GamePlay/GameFlow/GameFlowShowOff.cs"
+			],
+			[
+				"nbagam",
+				"Scripts/GamePlay/GameMode/NBAGameMode.cs"
+			],
+			[
+				"uiauman",
+				"Scripts/UI/UIAudioManager.cs"
+			],
+			[
+				"uipadow",
+				"Scripts/UI/Pages/UIPageDownload.cs"
+			],
+			[
+				"quali",
+				"Scripts/Managers/QualityManager.cs"
+			],
+			[
+				"gamconfi",
+				"Resources/game_configs.xml"
+			],
+			[
+				"lev",
+				"Scripts/Managers/LevelLoader.cs"
+			],
+			[
+				"cibuil",
+				"Scripts/Editor/CI/CIBuilder.cs"
+			],
+			[
+				"gacon",
+				"Resources/game_configs.xml"
+			],
+			[
+				"lightr",
+				"Shaders/CutScene/LightWrapping.shader"
+			],
+			[
+				"cibuild",
+				"Scripts/Editor/CI/CIBuilder.cs"
+			],
+			[
+				"levelo",
+				"Scripts/Managers/LevelLoader.cs"
+			],
+			[
+				"gameconfi",
+				"Resources/game_configs.xml"
+			],
+			[
+				"hivecon",
+				"Plugins/Android/res/raw/hive_config.xml"
+			],
+			[
+				"gameven",
+				"Scripts/GamePlay/GameMode/GameEvent.cs"
+			],
+			[
+				"timeou",
+				"Scripts/GamePlay/Rules/TimeoutRule.cs"
+			],
+			[
+				"twen",
+				"Scripts/GamePlay/Rules/TwentySecondsRule.cs"
+			],
+			[
+				"timeoutrule",
+				"Scripts/GamePlay/Rules/TimeoutRule.cs"
+			],
+			[
+				"uipagelogani",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"lux",
+				"Scripts/Crowd/LuxuryCrowdManager.cs"
+			],
+			[
+				"mirro",
+				"Shaders/Reflection/Mirror.cs"
+			],
+			[
+				"ing",
+				"Scripts/UI/Pages/UIPageInGame.cs"
+			],
+			[
+				"gamco",
+				"Resources/game_configs.xml"
+			],
+			[
+				"qu",
+				"Scripts/Managers/QualityManager.cs"
+			],
+			[
+				"mib",
+				"Shaders/Reflection/Mirror-BumpSpec.shader"
+			],
+			[
+				"mirrobu",
+				"Shaders/Reflection/Mirror-BumpSpec.shader"
+			],
+			[
+				"global",
+				"Scripts/Managers/Global.cs"
+			],
+			[
+				"uipaingam",
+				"Scripts/UI/Pages/UIPageInGame.cs"
+			],
+			[
+				"nbagame",
+				"Scripts/GamePlay/GameMode/NBAGameMode.cs"
+			],
+			[
+				"gameflowballdea",
+				"Scripts/GamePlay/GameFlow/GameFlowBallDead.cs"
+			],
+			[
+				"gameflowti",
+				"Scripts/GamePlay/GameFlow/GameFlowTimeout.cs"
+			],
+			[
+				"gameeve",
+				"Scripts/GamePlay/GameMode/GameEvent.cs"
+			],
+			[
+				"gammod",
+				"Scripts/GamePlay/GameMode/GameMode.cs"
+			],
+			[
+				"uipageingame",
+				"Scripts/UI/Pages/UIPageInGame.cs"
+			],
+			[
+				"gamdea",
+				"Scripts/GamePlay/GameFlow/GameFlowBallDead.cs"
+			],
+			[
+				"gathro",
+				"Scripts/GamePlay/GameFlow/GameFlowThrowIn.cs"
+			],
+			[
+				"gameflowdea",
+				"Scripts/GamePlay/GameFlow/GameFlowBallDead.cs"
+			],
+			[
+				"tiemout",
+				"Scripts/GamePlay/Rules/TimeoutRule.cs"
+			],
+			[
+				"gaflowthr",
+				"Scripts/GamePlay/GameFlow/GameFlowThrowIn.cs"
+			],
+			[
+				"gaflowballda",
+				"Scripts/GamePlay/GameFlow/GameFlowBallDead.cs"
+			],
+			[
+				"timeout",
+				"Scripts/GamePlay/Rules/TimeoutRule.cs"
+			],
+			[
+				"uiingam",
+				"Scripts/UI/Pages/UIPageInGame.cs"
+			],
+			[
+				"uipalogan",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"nbagamode",
+				"Scripts/GamePlay/GameMode/NBAGameMode.cs"
+			],
+			[
+				"backcou",
+				"Scripts/GamePlay/Rules/BallInBackcourtRule.cs"
+			],
+			[
+				"nbgam",
+				"Scripts/GamePlay/GameMode/NBAGameMode.cs"
+			],
+			[
+				"gameflowtime",
+				"Scripts/GamePlay/GameFlow/GameFlowTimeout.cs"
+			],
+			[
+				"interface",
+				"Externals/AVProVideo/Scripts/Internal/Interfaces.cs"
+			],
+			[
+				"uipagla",
+				"Scripts/UI/Pages/UIPageLogoAnim.cs"
+			],
+			[
+				"playerani",
+				"Assets/Scripts/Animations/PlayerAnimator.cs"
+			],
+			[
+				"condi",
+				"Assets/Scripts/AI/Dimension/Condition.cs"
+			],
+			[
+				"nbateap",
+				"Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs"
+			],
+			[
+				"memplayer",
+				"Assets/Scripts/AI/NBA/MemoPlayerListTask.cs"
+			],
+			[
+				"task",
+				"Assets/Scripts/AI/Dimension/Task.cs"
+			],
+			[
+				"memotask",
+				"Assets/Scripts/AI/Dimension/MemoTask.cs"
+			],
+			[
+				"memset",
+				"Assets/Scripts/AI/Dimension/MemoSetTask.cs"
+			],
+			[
+				"deco",
+				"Assets/Scripts/AI/Dimension/Decorator.cs"
+			],
+			[
+				"contain",
+				"Assets/Scripts/AI/Dimension/Container.cs"
+			],
+			[
+				"utili",
+				"Assets/Scripts/AI/Dimension/Utility.cs"
+			],
+			[
+				"basplay",
+				"Assets/Scripts/Player/BasePlayer.cs"
+			],
+			[
+				"player",
+				"Assets/Scripts/Player/Player.cs"
+			],
+			[
+				"beha",
+				"Assets/Scripts/AI/Dimension/Behavior.cs"
+			],
+			[
+				"contai",
+				"Assets/Scripts/AI/Dimension/Container.cs"
+			],
+			[
+				"dimeei",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditorUtility.cs"
+			],
+			[
+				"uti",
+				"Assets/Scripts/AI/Dimension/Utility.cs"
+			],
+			[
+				"dim",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditor.cs"
+			],
+			[
+				"b",
+				"Assets/Scripts/AI/Dimension/Behavior.cs"
+			],
+			[
+				"memoplay",
+				"Assets/Scripts/AI/NBA/MemoPlayerListTask.cs"
+			],
+			[
+				"aite",
+				"Assets/Scripts/AI/AITest.cs"
+			],
+			[
+				"die",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditor.cs"
+			],
+			[
+				"com",
+				"Assets/Scripts/AI/Dimension/Composite.cs"
+			],
+			[
+				"cont",
+				"Assets/Scripts/AI/Dimension/Container.cs"
+			],
+			[
+				"dimenedi",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditor.cs"
+			],
+			[
+				"dieu",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditorUtility.cs"
+			],
+			[
+				"nbatea",
+				"Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs"
+			],
+			[
+				"loo",
+				"Assets/Scripts/AI/Dimension/LoopSequence.cs"
+			],
+			[
+				"nbacondi",
+				"Assets/Scripts/AI/NBA/NBACondition.cs"
+			],
+			[
+				"comp",
+				"Assets/Scripts/AI/Dimension/Composite.cs"
+			],
+			[
+				"atom",
+				"Assets/Scripts/AI/Dimension/Atom.cs"
+			],
+			[
+				"memta",
+				"Assets/Scripts/AI/Dimension/MemoTask.cs"
+			],
+			[
+				"nbat",
+				"Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs"
+			],
+			[
+				"memsetta",
+				"Assets/Scripts/AI/Dimension/MemoSetTask.cs"
+			],
+			[
+				"nbateam",
+				"Assets/Scripts/AI/NBA/NBATeamPlayerTask.cs"
+			],
+			[
+				"memota",
+				"Assets/Scripts/AI/Dimension/MemoTask.cs"
+			],
+			[
+				"aites",
+				"Assets/AITest.xml"
+			],
+			[
+				"dimenu",
+				"Assets/Scripts/AI/Dimension/Editor/DimensionEditorUtility.cs"
+			],
+			[
+				"unitest",
+				"Assets/Scripts/AI/Dimension/Editor/UnitTest/UnitTestEditor.cs"
+			],
+			[
+				"be",
+				"Assets/Scripts/AI/Dimension/Behavior.cs"
+			],
+			[
+				"sequ",
+				"Assets/Scripts/AI/Dimension/Sequence.cs"
+			],
+			[
+				"selec",
+				"Assets/Scripts/AI/Dimension/Selector.cs"
+			],
+			[
+				"rand",
+				"Assets/Scripts/AI/Dimension/RandomSelector.cs"
+			],
+			[
+				"prio",
+				"Assets/Scripts/AI/Dimension/PrioritySelector.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Perforce/jimmy_mba/depot_NBA/branches/main/NBA/client/NBA.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 50.0,
+		"last_filter": "quit",
+		"selected_items":
+		[
+			[
+				"quit",
+				"_SyncQuizzResult"
+			],
+			[
+				"onack",
+				"OnAckMails"
+			],
+			[
+				"onshoot",
+				"OnBallShootOut"
+			],
+			[
+				"showfoulin",
+				"ShowFoulInfoBar"
+			],
+			[
+				"checksle",
+				"CheckSelection"
+			],
+			[
+				"getdis",
+				"GetDistancePlayers"
+			],
+			[
+				"getstro",
+				"GetStrongSideList"
+			],
+			[
+				"",
+				"계정"
+			],
+			[
+				"getplayerli",
+				"GetPlayerList"
+			]
+		],
+		"width": 578.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

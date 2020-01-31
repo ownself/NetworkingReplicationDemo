@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"file_include_patterns": ["*.xml", "*.cs","*.shader","*.sublime-project"],
+			"path": "Assets"
+		}
+	]
+}
