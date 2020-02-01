@@ -10,7 +10,7 @@ public class Gameplay : MonoBehaviour
 	static public float xInterval = 3.0f;
 	static public float yInterval = 4.0f;
 
-	float serverTickInterval = 1.0f / 4; // tick 32 times per second
+	static public float serverTickInterval = 1.0f / 32; // tick 32 times per second
 	float clientTickInterval = 1.0f / 32; // tick 32 times per second
 	float serverTicker = 0.0f;
 	float clientTicker = 0.0f;
@@ -29,14 +29,14 @@ public class Gameplay : MonoBehaviour
 
 		// add client #1
 		Client client1 = new Client();
-		client1.Init(0.0f, startZPos, KeyCode.D, KeyCode.A); // 500ms latency
+		client1.Init(0.05f, startZPos, KeyCode.D, KeyCode.A); // 500ms latency
 		client1.ConnectTo(server);
 		clients.Add(client1);
 		startZPos += yInterval;
 
 		// add client #2
 		Client client2 = new Client();
-		client2.Init(0.0f, startZPos, KeyCode.RightArrow, KeyCode.LeftArrow); // 0ms latency
+		client2.Init(0.05f, startZPos, KeyCode.RightArrow, KeyCode.LeftArrow); // 0ms latency
 		client2.ConnectTo(server);
 		clients.Add(client2);
 		startZPos += yInterval;
