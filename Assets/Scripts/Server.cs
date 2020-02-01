@@ -11,6 +11,7 @@ public class Server
 	float zPos;
 	List<ServerPlayer> players;
 	List<ClientInfo> receivedPackages;
+	List<Dictionary<int, Vector3>> buffedPackages;
 
 	public Server(float startZPos)
 	{
@@ -18,6 +19,7 @@ public class Server
 		clientsPos = new List<Vector3>();
 		players = new List<ServerPlayer>();
 		receivedPackages = new List<ClientInfo>();
+		buffedPackages = new List<Dictionary<int, Vector3>>();
 		zPos = startZPos;
 	}
 
@@ -29,6 +31,7 @@ public class Server
 		if (!clients.Contains(client))
 		{
 			clients.Add(client);
+			buffedPackages.Add(new Dictionary<int, Vector3>());
 			return clients.Count - 1;
 		}
 		return -1;
@@ -71,7 +74,9 @@ public class Server
 			{
 				if (clientsPos.Count > receivedPackages[index].playerID) // valid player ID
 				{
-					clientsPos[receivedPackages[index].playerID] += receivedPackages[index].movementVec;
+					int id = receivedPackages[index].playerID;
+					clientsPos[id] += receivedPackages[index].movementVec;
+					buffedPackages[id][receivedPackages[index].number] = clientsPos[id];
 				}
 				receivedPackages.RemoveAt(index);
 			} else {
@@ -96,7 +101,13 @@ public class Server
 			{
 				si.poses.Add(clientsPos[j]);
 			}
-			// si.poses = clientsPos;
+
+			foreach (KeyValuePair<int, Vector3> verif in buffedPackages[i])
+			{
+				si.verifications[verif.Key] = verif.Value;
+			}
+			buffedPackages[i].Clear();
+
 			clients[i].SyncWithServer(si);
 		}
 	}

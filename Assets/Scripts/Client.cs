@@ -14,6 +14,8 @@ public class Client
 	float zPos;
 	float networkLatency;
 	List<ServerInfo> receivedPackages;
+	int packageNum = 0;
+	Dictionary<int, Vector3> buffedPackages;
 
 	public KeyCode rightButton = KeyCode.D;
 	public KeyCode leftButton = KeyCode.A;
@@ -21,6 +23,7 @@ public class Client
 	public Client()
 	{
 		receivedPackages = new List<ServerInfo>();
+		buffedPackages = new Dictionary<int, Vector3>();
 	}
 
 	public void Init(float latency, float startZPos, KeyCode right, KeyCode left)
@@ -87,7 +90,27 @@ public class Client
 				ServerInfo si = receivedPackages[index];
 				for (int i = 0; i < si.poses.Count; ++i)
 				{
-					players[i].UpdatePosition(si.poses[i]);
+					if (i != localPlayerID)
+					{
+						players[i].UpdatePosition(si.poses[i]);
+					}
+					else // verification
+					{
+						foreach (KeyValuePair<int, Vector3> verif in si.verifications)
+						{
+							if (buffedPackages.ContainsKey(verif.Key))
+							{
+								if (!IsPredictionValid(buffedPackages[verif.Key], verif.Value))
+								{
+									players[i].UpdatePosition(verif.Value);
+									Debug.Log("correct player : " + i + "'s position");
+								}
+								buffedPackages.Remove(verif.Key);
+							} else {
+								Debug.Log("can't find number : " + verif.Key + "'s buffed package");
+							}
+						}
+					}
 				}
 				receivedPackages.RemoveAt(index);
 			} else {
@@ -104,11 +127,18 @@ public class Client
 		}
 
 		ClientInfo inputInfo = new ClientInfo();
+		inputInfo.number = packageNum++;
 		inputInfo.playerID = localPlayerID;
-		inputInfo.movementVec = localPlayer.GetMovementVec();
+		inputInfo.movementVec = localPlayer.PredictPosition();
 		localPlayer.ClearMovementVec();
 		inputInfo.networkLatency = networkLatency;
 		myServer.SyncClientInput(inputInfo);
+		buffedPackages[inputInfo.number] = localPlayer.GetPosition();
+	}
+
+	bool IsPredictionValid(Vector3 predictedPos, Vector3 authorizedPos)
+	{
+		return predictedPos.x == authorizedPos.x; // we only care about x value in this sample
 	}
 
 	// get the update from server sent back

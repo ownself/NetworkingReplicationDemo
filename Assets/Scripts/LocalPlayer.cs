@@ -30,6 +30,12 @@ public class LocalPlayer : Player
 		movementVec = Vector3.zero;
 	}
 
+	public Vector3 PredictPosition()
+	{
+		transform.position += movementVec;
+		return movementVec;
+	}
+
 	virtual protected void HandleInput()
 	{
 		if (Input.GetKey(rightButton))
