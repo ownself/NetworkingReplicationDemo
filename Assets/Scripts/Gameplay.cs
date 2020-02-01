@@ -10,8 +10,10 @@ public class Gameplay : MonoBehaviour
 	static public float xInterval = 3.0f;
 	static public float yInterval = 4.0f;
 
-	float serverTickInterval = 1.0f / 32; // tick 32 times per second
-	float ticker = 0.0f;
+	float serverTickInterval = 1.0f / 4; // tick 32 times per second
+	float clientTickInterval = 1.0f / 32; // tick 32 times per second
+	float serverTicker = 0.0f;
+	float clientTicker = 0.0f;
 
 	Server server;
 	List<Client> clients;
@@ -53,15 +55,22 @@ public class Gameplay : MonoBehaviour
 		}
 		server.Update();
 
-		// tick
-		ticker += Time.deltaTime;
-		if (ticker >= serverTickInterval)
+		// clients tick
+		clientTicker += Time.deltaTime;
+		if (clientTicker >= clientTickInterval)
 		{
-			ticker -= serverTickInterval; // prepare the ticker for next update
+			clientTicker -= clientTickInterval; // prepare the ticker for next update
 			for (int i = 0; i < clients.Count; ++i)
 			{
 				clients[i].Tick();
 			}
+		}
+
+		// server tick
+		serverTicker += Time.deltaTime;
+		if (serverTicker >= serverTickInterval)
+		{
+			serverTicker -= serverTickInterval; // prepare the ticker for next update
 			server.Tick();
 		}
 	}

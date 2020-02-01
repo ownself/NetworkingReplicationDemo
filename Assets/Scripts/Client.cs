@@ -80,6 +80,7 @@ public class Client
 			return;
 		}
 
+		// simulating networking lag
 		// update received client packages and calculate
 		int index = 0;
 		while (index < receivedPackages.Count)
