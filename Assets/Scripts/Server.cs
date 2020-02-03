@@ -5,13 +5,15 @@ using UnityEngine;
 // this is server simulation class to represent the behaviour of authoritive server
 public class Server
 {
-	// int playerNum = 0;
 	List<Client> clients;
 	List<Vector3> clientsPos;
 	float zPos;
 	List<ServerPlayer> players;
-	List<ClientInfo> receivedPackages;
-	List<Dictionary<int, Vector3>> buffedPackages;
+	List<ClientInfo> receivedPackages; // packages in networking
+	List<SortedList<int, Vector3>> packageQueue; // packages are waiting for processing
+	List<int> playerProcessedIndexes; // store the packages index for each players
+	List<Dictionary<int, Vector3>> authorizedPackages; // packages are ready to send to clients
+	int buffLength = 0.05f / Gameplay.clientTickInterval;
 
 	public Server(float startZPos)
 	{
@@ -19,7 +21,9 @@ public class Server
 		clientsPos = new List<Vector3>();
 		players = new List<ServerPlayer>();
 		receivedPackages = new List<ClientInfo>();
-		buffedPackages = new List<Dictionary<int, Vector3>>();
+		packageQueue = new List<SortedList<int, Vector3>>();
+		playerProcessedIndexes = new List<int>();
+		authorizedPackages = new List<Dictionary<int, Vector3>>();
 		zPos = startZPos;
 	}
 
@@ -31,7 +35,9 @@ public class Server
 		if (!clients.Contains(client))
 		{
 			clients.Add(client);
-			buffedPackages.Add(new Dictionary<int, Vector3>());
+			authorizedPackages.Add(new Dictionary<int, Vector3>());
+			playerProcessedIndexes.Add(0); // index starts from 0
+			packageQueue.Add(new SortedList<int, Vector3>());
 			return clients.Count - 1;
 		}
 		return -1;
@@ -74,13 +80,28 @@ public class Server
 			{
 				if (clientsPos.Count > receivedPackages[index].playerID) // valid player ID
 				{
-					int id = receivedPackages[index].playerID;
-					clientsPos[id] += receivedPackages[index].movementVec;
-					buffedPackages[id][receivedPackages[index].number] = clientsPos[id];
+					ClientInfo ci = receivedPackages[index];
+					packageQueue[ci.playerID].Add(ci.number, ci.movementVec);
 				}
 				receivedPackages.RemoveAt(index);
 			} else {
 				index++;
+			}
+		}
+
+		for (int i = 0; i < playerProcessedIndexes.Count; ++i)
+		{
+			// if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
+			// {
+			// 	Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
+			// 		+ packageQueue[i].Keys[0]);
+			// }
+			while (packageQueue[i].Count > 0 && playerProcessedIndexes[i] == packageQueue[i].Keys[0])
+			{
+				clientsPos[i] += packageQueue[i].Values[0]; // do update
+				authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
+				playerProcessedIndexes[i]++;
+				packageQueue[i].RemoveAt(0);
 			}
 		}
 
@@ -102,11 +123,11 @@ public class Server
 				si.poses.Add(clientsPos[j]);
 			}
 
-			foreach (KeyValuePair<int, Vector3> verif in buffedPackages[i])
+			foreach (KeyValuePair<int, Vector3> verif in authorizedPackages[i])
 			{
 				si.verifications[verif.Key] = verif.Value;
 			}
-			buffedPackages[i].Clear();
+			authorizedPackages[i].Clear();
 
 			clients[i].SyncWithServer(si);
 		}

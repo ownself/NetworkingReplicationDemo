@@ -7,7 +7,7 @@ public class RemotePlayer : Player
 {
 	Vector3 speedVec;
 
-	void Update()
+	override protected void Update()
 	{
 		transform.position += speedVec * Time.deltaTime; // interpolating
 	}
