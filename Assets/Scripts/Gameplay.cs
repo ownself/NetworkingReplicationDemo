@@ -10,8 +10,8 @@ public class Gameplay : MonoBehaviour
 	static public float xInterval = 3.0f;
 	static public float yInterval = 4.0f;
 
-	static public float serverTickInterval = 1.0f / 32; // tick 32 times per second
-	static public float clientTickInterval = 1.0f / 32; // tick 32 times per second
+	static public float serverTickInterval = 1.0f / 10; // tick 32 times per second
+	static public float clientTickInterval = 1.0f / 64; // tick 32 times per second
 	float serverTicker = 0.0f;
 	float clientTicker = 0.0f;
 

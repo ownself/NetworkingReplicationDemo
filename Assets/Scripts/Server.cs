@@ -11,9 +11,12 @@ public class Server
 	List<ServerPlayer> players;
 	List<ClientInfo> receivedPackages; // packages in networking
 	List<SortedList<int, Vector3>> packageQueue; // packages are waiting for processing
+	List<Vector3> lastPackages; // cache the last received one in case any package lost;
 	List<int> playerProcessedIndexes; // store the packages index for each players
 	List<Dictionary<int, Vector3>> authorizedPackages; // packages are ready to send to clients
-	int buffLength = (int)(0.05f / Gameplay.clientTickInterval);
+	// less means remote player reacts faster but higher chance to get jiggle due to misorder of network package
+	// higher means remote players reacts a bit slower but lower chance to face misorder issue.
+	int buffLength = 2;
 
 	public Server(float startZPos)
 	{
@@ -22,6 +25,7 @@ public class Server
 		players = new List<ServerPlayer>();
 		receivedPackages = new List<ClientInfo>();
 		packageQueue = new List<SortedList<int, Vector3>>();
+		lastPackages = new List<Vector3>();
 		playerProcessedIndexes = new List<int>();
 		authorizedPackages = new List<Dictionary<int, Vector3>>();
 		zPos = startZPos;
@@ -38,6 +42,7 @@ public class Server
 			authorizedPackages.Add(new Dictionary<int, Vector3>());
 			playerProcessedIndexes.Add(0); // index starts from 0
 			packageQueue.Add(new SortedList<int, Vector3>());
+			lastPackages.Add(Vector3.zero);
 			return clients.Count - 1;
 		}
 		return -1;
@@ -71,14 +76,16 @@ public class Server
 	// do authorized upate and send back to client
 	public void Update()
 	{
-		// update received client packages and calculate
+		// update received client packages and simulate networking latency
 		int index = 0;
 		while (index < receivedPackages.Count)
 		{
 			receivedPackages[index].networkLatency -= Time.deltaTime;
 			if (receivedPackages[index].networkLatency <= 0.0f) // package arrived
 			{
-				if (clientsPos.Count > receivedPackages[index].playerID) // valid player ID
+				// check valid ID and if the package has been considered as lost
+				if (clientsPos.Count > receivedPackages[index].playerID &&
+					receivedPackages[index].number > playerProcessedIndexes[receivedPackages[index].playerID])
 				{
 					ClientInfo ci = receivedPackages[index];
 					packageQueue[ci.playerID].Add(ci.number, ci.movementVec);
@@ -89,19 +96,38 @@ public class Server
 			}
 		}
 
+		// process packages and update world
 		for (int i = 0; i < playerProcessedIndexes.Count; ++i)
 		{
-			// if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
-			// {
-			// 	Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
-			// 		+ packageQueue[i].Keys[0]);
-			// }
-			while (packageQueue[i].Count > 0 && playerProcessedIndexes[i] == packageQueue[i].Keys[0])
+			if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
 			{
-				clientsPos[i] += packageQueue[i].Values[0]; // do update
-				authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
-				playerProcessedIndexes[i]++;
-				packageQueue[i].RemoveAt(0);
+				Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
+					+ packageQueue[i].Keys[0]);
+			}
+			// while (packageQueue[i].Count > buffLength && playerProcessedIndexes[i] == packageQueue[i].Keys[0])
+			// {
+			// 	clientsPos[i] += packageQueue[i].Values[0]; // do update
+			// 	authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
+			// 	playerProcessedIndexes[i]++;
+			// 	packageQueue[i].RemoveAt(0);
+			// }
+			while (packageQueue[i].Count > buffLength)
+			{
+				if (playerProcessedIndexes[i] != packageQueue[i].Keys[0]) // consider package lost
+				{
+					clientsPos[i] += lastPackages[i]; // use last received package to do update
+					authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
+					Debug.Log("player " + i + " lost " + playerProcessedIndexes[i] + "# package");
+					playerProcessedIndexes[i]++;
+				}
+				else
+				{
+					clientsPos[i] += packageQueue[i].Values[0]; // do update
+					lastPackages[i] = packageQueue[i].Values[0]; // cache this one as the last
+					authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
+					playerProcessedIndexes[i]++;
+					packageQueue[i].RemoveAt(0);
+				}
 			}
 		}
 
