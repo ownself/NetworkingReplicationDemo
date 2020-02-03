@@ -13,7 +13,7 @@ public class Server
 	List<SortedList<int, Vector3>> packageQueue; // packages are waiting for processing
 	List<int> playerProcessedIndexes; // store the packages index for each players
 	List<Dictionary<int, Vector3>> authorizedPackages; // packages are ready to send to clients
-	int buffLength = 0.05f / Gameplay.clientTickInterval;
+	int buffLength = (int)(0.05f / Gameplay.clientTickInterval);
 
 	public Server(float startZPos)
 	{
