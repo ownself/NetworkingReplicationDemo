@@ -104,7 +104,11 @@ public class Client
 								if (!IsPredictionValid(buffedPackages[verif.Key], verif.Value))
 								{
 									players[i].UpdatePosition(verif.Value);
-									Debug.Log("correct player : " + i + "'s position");
+									// Debug.Log("correct player : " + i + "'s position");
+								}
+								else // confirm the prediction and remove the correction
+								{
+									localPlayer.ConfirmPrediction();
 								}
 								buffedPackages.Remove(verif.Key);
 							} else {
@@ -133,7 +137,7 @@ public class Client
 		inputInfo.movementVec = localPlayer.PredictPosition();
 		localPlayer.ClearMovementVec();
 		// inputInfo.networkLatency = networkLatency;
-		inputInfo.networkLatency = Random.Range(networkLatency - 0.02f, networkLatency + 0.02f);
+		inputInfo.networkLatency = Random.Range(networkLatency, networkLatency + 0.05f); // 50ms
 		myServer.SyncClientInput(inputInfo);
 		buffedPackages[inputInfo.number] = localPlayer.GetPosition();
 	}

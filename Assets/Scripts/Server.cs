@@ -85,10 +85,14 @@ public class Server
 			{
 				// check valid ID and if the package has been considered as lost
 				if (clientsPos.Count > receivedPackages[index].playerID &&
-					receivedPackages[index].number > playerProcessedIndexes[receivedPackages[index].playerID])
+					receivedPackages[index].number >= playerProcessedIndexes[receivedPackages[index].playerID])
 				{
 					ClientInfo ci = receivedPackages[index];
 					packageQueue[ci.playerID].Add(ci.number, ci.movementVec);
+				}
+				else {
+					// Debug.Log("player " + receivedPackages[index].playerID + " has been considered as lost : " + receivedPackages[index].number
+					// 	 + ", " + playerProcessedIndexes[receivedPackages[index].playerID] + ", " + receivedPackages[index].movementVec.magnitude);
 				}
 				receivedPackages.RemoveAt(index);
 			} else {
@@ -99,25 +103,20 @@ public class Server
 		// process packages and update world
 		for (int i = 0; i < playerProcessedIndexes.Count; ++i)
 		{
-			if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
-			{
-				Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
-					+ packageQueue[i].Keys[0]);
-			}
-			// while (packageQueue[i].Count > buffLength && playerProcessedIndexes[i] == packageQueue[i].Keys[0])
+			// if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
 			// {
-			// 	clientsPos[i] += packageQueue[i].Values[0]; // do update
-			// 	authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
-			// 	playerProcessedIndexes[i]++;
-			// 	packageQueue[i].RemoveAt(0);
+			// 	Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
+			// 		+ packageQueue[i].Keys[0]);
 			// }
-			while (packageQueue[i].Count > buffLength)
+
+			// process the package queue when it's fullfilled
+			if (packageQueue[i].Count > buffLength)
 			{
 				if (playerProcessedIndexes[i] != packageQueue[i].Keys[0]) // consider package lost
 				{
 					clientsPos[i] += lastPackages[i]; // use last received package to do update
 					authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
-					Debug.Log("player " + i + " lost " + playerProcessedIndexes[i] + "# package");
+					// Debug.Log("player " + i + " lost #" + playerProcessedIndexes[i] + " package : " + lastPackages[i].magnitude);
 					playerProcessedIndexes[i]++;
 				}
 				else
