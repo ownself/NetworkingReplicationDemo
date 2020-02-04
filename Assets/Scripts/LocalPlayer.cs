@@ -8,11 +8,9 @@ public class LocalPlayer : Player
 	public KeyCode rightButton = KeyCode.D;
 	public KeyCode leftButton = KeyCode.A;
 
-	Vector3 correctVec;
-
-	public void Init(float startZPos, KeyCode right, KeyCode left)
+	public void Init(float startZPos, float tickInterval, KeyCode right, KeyCode left)
 	{
-		base.Init(startZPos);
+		base.Init(startZPos, tickInterval);
 		rightButton = right;
 		leftButton = left;
 	}
@@ -20,21 +18,13 @@ public class LocalPlayer : Player
 	// Update is called once per frame
 	override protected void Update()
 	{
-		transform.position += correctVec * Time.deltaTime; // interpolating
+		base.Update();
 		HandleInput();
 	}
 
 	public void ConfirmPrediction()
 	{
-		correctVec = Vector3.zero;
-	}
-
-	// set speed for interpolating
-	override public void UpdatePosition(Vector3 pos)
-	{
-		pos.z += zPos;
-		correctVec = (pos - transform.position) / Gameplay.serverTickInterval;
-		// transform.position = pos;
+		speedVec = Vector3.zero;
 	}
 
 	public void ClearMovementVec() // TODO : put this into network sync logic

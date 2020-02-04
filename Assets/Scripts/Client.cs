@@ -60,12 +60,12 @@ public class Client
 			{
 				GameObject player = GameObject.Instantiate(Resources.Load("LocalPlayer", typeof(GameObject)), new Vector3(xPos, 0.5f, zPos), Quaternion.identity) as GameObject;
 				localPlayer = player.GetComponent<LocalPlayer>();
-				localPlayer.Init(zPos, rightButton, leftButton);
+				localPlayer.Init(zPos, Gameplay.serverTickInterval, rightButton, leftButton);
 				players.Add(localPlayer);
 			} else { // remote player
 				GameObject player = GameObject.Instantiate(Resources.Load("RemotePlayer", typeof(GameObject)), new Vector3(xPos, 0.5f, zPos), Quaternion.identity) as GameObject;
 				RemotePlayer remotePlayer = player.GetComponent<RemotePlayer>();
-				remotePlayer.Init(zPos);
+				remotePlayer.Init(zPos, Gameplay.serverTickInterval);
 				players.Add(remotePlayer);
 			}
 			xPos += Gameplay.xInterval;

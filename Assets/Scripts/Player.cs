@@ -9,15 +9,20 @@ abstract public class Player : MonoBehaviour
 	protected Vector3 movementVec = Vector3.zero;
 	protected int playerID = -1;
 	protected float zPos;
+	protected float interval;
+	protected Vector3 speedVec;
 
 	protected void Start() {}
-	virtual protected void Update() {}
+	virtual protected void Update()
+	{
+		transform.position += speedVec * Time.deltaTime; // interpolating
+	}
 
-	public void Init(float startZPos) { zPos = startZPos; }
+	public void Init(float startZPos, float tickInterval) { zPos = startZPos; interval = tickInterval; }
 	virtual public Vector3 GetPosition() { return transform.position; }
 	virtual public void UpdatePosition(Vector3 pos)
 	{
 		pos.z += zPos;
-		transform.position = pos;
+		speedVec = (pos - transform.position) / interval;
 	}
 }
