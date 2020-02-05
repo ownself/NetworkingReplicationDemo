@@ -22,9 +22,11 @@ public class LocalPlayer : Player
 		HandleInput();
 	}
 
-	public void ConfirmPrediction()
+	// correction only for localplayer
+	override public void UpdatePosition(Vector3 pos) 
 	{
-		speedVec = Vector3.zero;
+		pos.z = 0.0f; // get rid of z
+		transform.position += pos; // snap to position
 	}
 
 	public void ClearMovementVec() // TODO : put this into network sync logic

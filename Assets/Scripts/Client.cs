@@ -15,7 +15,7 @@ public class Client
 	float networkLatency;
 	List<ServerInfo> receivedPackages;
 	int packageNum = 0;
-	Dictionary<int, Vector3> buffedPackages;
+	SortedList<int, Vector3> buffedPackages;
 
 	public KeyCode rightButton = KeyCode.D;
 	public KeyCode leftButton = KeyCode.A;
@@ -23,7 +23,7 @@ public class Client
 	public Client()
 	{
 		receivedPackages = new List<ServerInfo>();
-		buffedPackages = new Dictionary<int, Vector3>();
+		buffedPackages = new SortedList<int, Vector3>();
 	}
 
 	public void Init(float latency, float startZPos, KeyCode right, KeyCode left)
@@ -79,7 +79,6 @@ public class Client
 			Debug.Log("Client " + localPlayerID + ": Can't find server");
 			return;
 		}
-
 		// simulating networking lag
 		// update received client packages and calculate
 		int index = 0;
@@ -103,12 +102,23 @@ public class Client
 							{
 								if (!IsPredictionValid(buffedPackages[verif.Key], verif.Value))
 								{
-									players[i].UpdatePosition(verif.Value);
-									// Debug.Log("correct player : " + i + "'s position");
-								}
-								else // confirm the prediction and remove the correction
-								{
-									localPlayer.ConfirmPrediction();
+									// Debug.Log("correct player : " + i + "'s position : " + verif.Key);
+									Vector3 diffVec = verif.Value - buffedPackages[verif.Key];
+									// remove the previous buffers
+									for (int j = 0; j < buffedPackages.IndexOfKey(verif.Key); ++j)
+									{
+										buffedPackages.RemoveAt(j);
+									}
+									// correct consequent buffers
+									for (int j = buffedPackages.IndexOfKey(verif.Key); j < buffedPackages.Count; ++j)
+									{
+										int buffKey = buffedPackages.Keys[j];
+										Vector3 buffValue = buffedPackages.Values[j];
+										buffedPackages.RemoveAt(j);
+										buffValue += diffVec;
+										buffedPackages.Add(buffKey, buffValue);
+									}
+									players[i].UpdatePosition(diffVec); // correction
 								}
 								buffedPackages.Remove(verif.Key);
 							} else {
@@ -139,7 +149,8 @@ public class Client
 		// inputInfo.networkLatency = networkLatency; // constant latency if it's perfect world
 		inputInfo.networkLatency = Random.Range(networkLatency, networkLatency + 0.05f); // randomize 50ms latency variation
 		myServer.SyncClientInput(inputInfo);
-		buffedPackages[inputInfo.number] = localPlayer.GetPosition();
+		// buffedPackages[inputInfo.number] = localPlayer.GetPosition();
+		buffedPackages.Add(inputInfo.number, localPlayer.GetPosition());
 	}
 
 	bool IsPredictionValid(Vector3 predictedPos, Vector3 authorizedPos)

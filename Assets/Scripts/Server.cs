@@ -15,7 +15,7 @@ public class Server
 	List<int> playerProcessedIndexes; // store the packages index for each players
 	List<Dictionary<int, Vector3>> authorizedPackages; // packages are ready to send to clients
 
-	// less means remote player reacts faster but higher chance to get jiggle due to misorder of network package
+	// less means remote player reacts faster but higher chance to get jiggling due to misorder of network package
 	// higher means remote players reacts a bit slower but lower chance to face misorder issue.
 	int buffLength = 2;
 
