@@ -14,9 +14,10 @@ public class Server
 	List<Vector3> lastPackages; // cache the last received one in case any package lost;
 	List<int> playerProcessedIndexes; // store the packages index for each players
 	List<Dictionary<int, Vector3>> authorizedPackages; // packages are ready to send to clients
+
 	// less means remote player reacts faster but higher chance to get jiggle due to misorder of network package
 	// higher means remote players reacts a bit slower but lower chance to face misorder issue.
-	int buffLength = 7;
+	int buffLength = 2;
 
 	public Server(float startZPos)
 	{
@@ -89,14 +90,6 @@ public class Server
 				{
 					ClientInfo ci = receivedPackages[index];
 					packageQueue[ci.playerID].Add(ci.number, ci.movementVec);
-					if (ci.playerID == 0)
-					{
-						Debug.Log("Adding package : " + packageQueue[ci.playerID].Count);
-					}
-				}
-				else {
-					// Debug.Log("player " + receivedPackages[index].playerID + " has been considered as lost : " + receivedPackages[index].number
-					// 	 + ", " + playerProcessedIndexes[receivedPackages[index].playerID] + ", " + receivedPackages[index].movementVec.magnitude);
 				}
 				receivedPackages.RemoveAt(index);
 			} else {
@@ -107,12 +100,6 @@ public class Server
 		// process packages and update world
 		for (int i = 0; i < playerProcessedIndexes.Count; ++i)
 		{
-			// if (packageQueue[i].Count > 0 && playerProcessedIndexes[i] != packageQueue[i].Keys[0])
-			// {
-			// 	Debug.Log("player " + i + " disorder happens : " + playerProcessedIndexes[i] + ", "
-			// 		+ packageQueue[i].Keys[0]);
-			// }
-
 			// process the package queue when it's fullfilled
 			if (packageQueue[i].Count > buffLength)
 			{
@@ -130,17 +117,6 @@ public class Server
 					authorizedPackages[i][playerProcessedIndexes[i]] = clientsPos[i]; // prepare the data to send back
 					playerProcessedIndexes[i]++;
 					packageQueue[i].RemoveAt(0);
-					if (i == 0)
-					{
-						Debug.Log("processed package : " + packageQueue[i].Count);
-					}
-				}
-			}
-			else
-			{
-				if (i == 0 && packageQueue[i].Count == 0)
-				{
-					Debug.Log("No package to process : " + packageQueue[i].Count);
 				}
 			}
 		}

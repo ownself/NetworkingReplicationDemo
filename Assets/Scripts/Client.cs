@@ -136,8 +136,8 @@ public class Client
 		inputInfo.playerID = localPlayerID;
 		inputInfo.movementVec = localPlayer.PredictPosition();
 		localPlayer.ClearMovementVec();
-		// inputInfo.networkLatency = networkLatency;
-		inputInfo.networkLatency = Random.Range(networkLatency, networkLatency + 0.05f); // 50ms
+		// inputInfo.networkLatency = networkLatency; // constant latency if it's perfect world
+		inputInfo.networkLatency = Random.Range(networkLatency, networkLatency + 0.05f); // randomize 50ms latency variation
 		myServer.SyncClientInput(inputInfo);
 		buffedPackages[inputInfo.number] = localPlayer.GetPosition();
 	}
