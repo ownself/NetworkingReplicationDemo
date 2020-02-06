@@ -57,7 +57,7 @@ public class Server
 			// add server player in server for authority
 			GameObject player = GameObject.Instantiate(Resources.Load("ServerPlayer", typeof(GameObject)), new Vector3(xPos, 0.5f, zPos), Quaternion.identity) as GameObject;
 			ServerPlayer serverPlayer = player.GetComponent<ServerPlayer>();
-			serverPlayer.Init(zPos, Gameplay.clientTickInterval);
+			serverPlayer.Init(i, zPos, Gameplay.clientTickInterval);
 			players.Add(serverPlayer);
 
 			clientsPos.Add(new Vector3(xPos, 0.5f, 0.0f));

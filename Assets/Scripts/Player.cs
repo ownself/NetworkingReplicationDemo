@@ -11,6 +11,7 @@ abstract public class Player : MonoBehaviour
 	protected float zPos;
 	protected float interval;
 	protected Vector3 speedVec;
+	public TextMesh label;
 
 	protected void Start() {}
 	virtual protected void Update()
@@ -21,7 +22,15 @@ abstract public class Player : MonoBehaviour
 		}
 	}
 
-	public void Init(float startZPos, float tickInterval) { zPos = startZPos; interval = tickInterval; }
+	virtual protected string GetTypeName() { return ""; }
+
+	public void Init(int id, float startZPos, float tickInterval)
+	{
+		playerID = id;
+		zPos = startZPos;
+		interval = tickInterval;
+		label.text = GetTypeName() + (playerID + 1).ToString();
+	}
 	virtual public Vector3 GetPosition() { return transform.position; }
 	virtual public void UpdatePosition(Vector3 pos)
 	{

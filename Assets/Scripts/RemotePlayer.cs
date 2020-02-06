@@ -6,4 +6,5 @@ using UnityEngine;
 public class RemotePlayer : Player
 {
 	// add things only for remote players
+	override protected string GetTypeName() { return "remote player:"; }
 }

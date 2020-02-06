@@ -8,9 +8,11 @@ public class LocalPlayer : Player
 	public KeyCode rightButton = KeyCode.D;
 	public KeyCode leftButton = KeyCode.A;
 
-	public void Init(float startZPos, float tickInterval, KeyCode right, KeyCode left)
+	override protected string GetTypeName() { return "local player:"; }
+
+	public void Init(int id, float startZPos, float tickInterval, KeyCode right, KeyCode left)
 	{
-		base.Init(startZPos, tickInterval);
+		base.Init(id, startZPos, tickInterval);
 		rightButton = right;
 		leftButton = left;
 	}

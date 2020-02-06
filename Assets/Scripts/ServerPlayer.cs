@@ -6,4 +6,5 @@ using UnityEngine;
 public class ServerPlayer : Player
 {
 	// add things only for server players
+	override protected string GetTypeName() { return "server player:"; }
 }
