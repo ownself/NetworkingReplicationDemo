@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// info structure sending from client to server
 public class ClientInfo
 {
 	public int number;
@@ -10,6 +11,7 @@ public class ClientInfo
 	public float networkLatency;
 }
 
+// info structure sending from server to client
 public class ServerInfo
 {
 	public int number;

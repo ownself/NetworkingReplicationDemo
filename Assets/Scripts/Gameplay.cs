@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // just like Main() in C++
 public class Gameplay : MonoBehaviour
@@ -14,6 +15,14 @@ public class Gameplay : MonoBehaviour
 	static public float clientTickInterval = 1.0f / 64; // tick 32 times per second
 	float serverTicker = 0.0f;
 	float clientTicker = 0.0f;
+
+	static public float networkLatency = 0.05f; // 50ms by default
+	static public float networkLatencyFloat = 0.05f; // 50ms by default
+	static public bool isServerBufferEnabled = true;
+	static public bool isClientPredictionEnabled = true;
+	static public bool isEntityInterpolationEnabled = true;
+	public GameObject latencyText = null;
+	public GameObject latencyFloatText = null;
 
 	Server server;
 	List<Client> clients;
@@ -29,14 +38,14 @@ public class Gameplay : MonoBehaviour
 
 		// add client #1
 		Client client1 = new Client();
-		client1.Init(0.05f, startZPos, KeyCode.D, KeyCode.A); // 500ms latency
+		client1.Init(startZPos, KeyCode.D, KeyCode.A); // 500ms latency
 		client1.ConnectTo(server);
 		clients.Add(client1);
 		startZPos += yInterval;
 
 		// add client #2
 		Client client2 = new Client();
-		client2.Init(0.05f, startZPos, KeyCode.RightArrow, KeyCode.LeftArrow); // 0ms latency
+		client2.Init(startZPos, KeyCode.RightArrow, KeyCode.LeftArrow); // 0ms latency
 		client2.ConnectTo(server);
 		clients.Add(client2);
 		startZPos += yInterval;
@@ -73,5 +82,40 @@ public class Gameplay : MonoBehaviour
 			serverTicker -= serverTickInterval; // prepare the ticker for next update
 			server.Tick();
 		}
+	}
+
+	public void OnSlideLatencyChanged(float value)
+	{
+		networkLatency = value;
+		if (latencyText != null)
+		{
+			int millisecond = (int)(value * 1000);
+			latencyText.GetComponent<Text>().text = "network latency: " + millisecond + "ms";
+		}
+	}
+
+	public void OnSlideLatencyFloatChanged(float value)
+	{
+		networkLatencyFloat = value;
+		if (latencyFloatText != null)
+		{
+			int millisecond = (int)(value * 1000);
+			latencyFloatText.GetComponent<Text>().text = "latency float: " + millisecond + "ms";
+		}
+	}
+
+	public void OnServerBufferEnabled(bool value)
+	{
+		isServerBufferEnabled = value;
+	}
+
+	public void OnClientPredictionEnabled(bool value)
+	{
+		isClientPredictionEnabled = value;
+	}
+
+	public void OnEntityInterpolationEnabled(bool value)
+	{
+		isEntityInterpolationEnabled = value;
 	}
 }

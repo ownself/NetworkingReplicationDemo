@@ -15,7 +15,10 @@ abstract public class Player : MonoBehaviour
 	protected void Start() {}
 	virtual protected void Update()
 	{
-		transform.position += speedVec * Time.deltaTime; // interpolating
+		if (Gameplay.isEntityInterpolationEnabled)
+		{
+			transform.position += speedVec * Time.deltaTime; // interpolating
+		}
 	}
 
 	public void Init(float startZPos, float tickInterval) { zPos = startZPos; interval = tickInterval; }
@@ -23,6 +26,11 @@ abstract public class Player : MonoBehaviour
 	virtual public void UpdatePosition(Vector3 pos)
 	{
 		pos.z += zPos;
-		speedVec = (pos - transform.position) / interval;
+		if (Gameplay.isEntityInterpolationEnabled) {
+			speedVec = (pos - transform.position) / interval;
+		} else {
+			transform.position = pos;
+		}
+
 	}
 }

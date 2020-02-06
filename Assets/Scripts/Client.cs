@@ -12,7 +12,6 @@ public class Client
 	LocalPlayer localPlayer;
 	List<Player> players;
 	float zPos;
-	float networkLatency;
 	List<ServerInfo> receivedPackages;
 	int packageNum = 0;
 	SortedList<int, Vector3> buffedPackages;
@@ -26,12 +25,11 @@ public class Client
 		buffedPackages = new SortedList<int, Vector3>();
 	}
 
-	public void Init(float latency, float startZPos, KeyCode right, KeyCode left)
+	public void Init(float startZPos, KeyCode right, KeyCode left)
 	{
 		zPos = startZPos; // set z pos for this client
 		rightButton = right;
 		leftButton = left;
-		networkLatency = latency;
 	}
 
 	public void ConnectTo(Server server)
@@ -90,7 +88,7 @@ public class Client
 				ServerInfo si = receivedPackages[index];
 				for (int i = 0; i < si.poses.Count; ++i)
 				{
-					if (i != localPlayerID)
+					if (i != localPlayerID || !Gameplay.isClientPredictionEnabled)
 					{
 						players[i].UpdatePosition(si.poses[i]);
 					}
@@ -118,11 +116,11 @@ public class Client
 										buffValue += diffVec;
 										buffedPackages.Add(buffKey, buffValue);
 									}
-									players[i].UpdatePosition(diffVec); // correction
+									localPlayer.CorrectPosition(diffVec); // correction
 								}
 								buffedPackages.Remove(verif.Key);
-							} else {
-								Debug.Log("can't find number : " + verif.Key + "'s buffed package");
+							// } else {
+							// 	Debug.Log("can't find number : " + verif.Key + "'s buffed package");
 							}
 						}
 					}
@@ -144,13 +142,21 @@ public class Client
 		ClientInfo inputInfo = new ClientInfo();
 		inputInfo.number = packageNum++;
 		inputInfo.playerID = localPlayerID;
-		inputInfo.movementVec = localPlayer.PredictPosition();
+		if (Gameplay.isClientPredictionEnabled) {
+			inputInfo.movementVec = localPlayer.PredictPosition();
+			buffedPackages.Add(inputInfo.number, localPlayer.GetPosition());
+		} else {
+			inputInfo.movementVec = localPlayer.GetMovement();
+		}
 		localPlayer.ClearMovementVec();
-		// inputInfo.networkLatency = networkLatency; // constant latency if it's perfect world
-		inputInfo.networkLatency = Random.Range(networkLatency, networkLatency + 0.05f); // randomize 50ms latency variation
+
+		// constant latency if it's perfect world
+		// inputInfo.networkLatency = Gameplay.networkLatency;
+		// randomize 50ms latency variation
+		inputInfo.networkLatency = Random.Range(Gameplay.networkLatency,
+			Gameplay.networkLatency + Gameplay.networkLatencyFloat); 
+
 		myServer.SyncClientInput(inputInfo);
-		// buffedPackages[inputInfo.number] = localPlayer.GetPosition();
-		buffedPackages.Add(inputInfo.number, localPlayer.GetPosition());
 	}
 
 	bool IsPredictionValid(Vector3 predictedPos, Vector3 authorizedPos)
@@ -161,7 +167,7 @@ public class Client
 	// get the update from server sent back
 	public void SyncWithServer(ServerInfo poses)
 	{
-		poses.networkLatency = this.networkLatency;
+		poses.networkLatency = Gameplay.networkLatency;
 		receivedPackages.Add(poses);
 	}
 }

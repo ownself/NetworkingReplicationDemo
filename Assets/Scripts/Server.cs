@@ -101,7 +101,7 @@ public class Server
 		for (int i = 0; i < playerProcessedIndexes.Count; ++i)
 		{
 			// process the package queue when it's fullfilled
-			if (packageQueue[i].Count > buffLength)
+			if (packageQueue[i].Count > (Gameplay.isServerBufferEnabled ? buffLength : 0))
 			{
 				if (playerProcessedIndexes[i] != packageQueue[i].Keys[0]) // consider package lost
 				{

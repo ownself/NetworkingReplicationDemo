@@ -22,8 +22,7 @@ public class LocalPlayer : Player
 		HandleInput();
 	}
 
-	// correction only for localplayer
-	override public void UpdatePosition(Vector3 pos) 
+	public void CorrectPosition(Vector3 pos)
 	{
 		pos.z = 0.0f; // get rid of z
 		transform.position += pos; // snap to position
@@ -33,6 +32,11 @@ public class LocalPlayer : Player
 	{
 		// clean previous input
 		movementVec = Vector3.zero;
+	}
+
+	public Vector3 GetMovement()
+	{
+		return movementVec;
 	}
 
 	public Vector3 PredictPosition()
